@@ -1,0 +1,24 @@
+DESCRIPTION:
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+public class Kata {
+    public static int findShort(String s) {
+      
+      String[] sSplit = s.split(" ");
+      
+      String temp=sSplit[0];
+      int tMenor=sSplit[0].length();
+      
+      for(int i=1;i<sSplit.length;i++){
+        if(sSplit[i].length()< temp.length()){
+          temp=sSplit[i];
+          tMenor=sSplit[i].length();
+        }
+      }
+      
+      return tMenor;
+      
+    }
+}
