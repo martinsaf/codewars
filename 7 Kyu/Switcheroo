@@ -1,0 +1,28 @@
+DESCRIPTION:
+Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+Example:
+
+'acb' --> 'bca'
+'aabacbaa' --> 'bbabcabb'
+
+public class Switch {
+  public static String switcheroo(String x) {
+    
+    char[] c = x.toCharArray();
+    
+    for(int i=0;i<c.length;i++){
+      if(c[i]=='a'){
+        c[i]='b';
+      }else if(c[i]=='b'){
+        c[i]='a';
+      }else{
+        continue;
+      }
+    }
+    
+    String swappedString = new String(c);
+    
+    return swappedString;
+  }
+}
