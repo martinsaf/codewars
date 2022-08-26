@@ -1,0 +1,44 @@
+DESCRIPTION:
+Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+Examples
+"is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+"4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+""  -->  ""
+
+public class Order {
+  public static String order(String words) {
+    //usar o split para ter acesso a cada palavra
+    //correr um for no array das palavras e correr outro for para as letras para verificar os numeros
+    String output = "";
+    
+    if(!words.isEmpty()){
+       String[] wordsSplit = words.split(" ");
+    String[] wordsOutput = new String[wordsSplit.length];
+    
+    for(int i=0;i<wordsSplit.length;i++){
+        
+        for(int j=0;j<wordsSplit[i].length();j++){
+          
+          if(wordsSplit[i].charAt(j) == '1' || wordsSplit[i].charAt(j) == '2' || wordsSplit[i].charAt(j) == '3' || wordsSplit[i].charAt(j) == '4' || wordsSplit[i].charAt(j) == '5' || wordsSplit[i].charAt(j) == '6' || wordsSplit[i].charAt(j) == '7' || wordsSplit[i].charAt(j) == '8' || wordsSplit[i].charAt(j) == '9'){
+            int pos=wordsSplit[i].charAt(j) - '0';
+            System.out.println(pos);
+            wordsOutput[pos-1] = wordsSplit[i];
+          }
+        }
+      }
+    for(int k=0;k<wordsOutput.length;k++){
+      output+=wordsOutput[k];
+      if(k<wordsOutput.length-1){
+        output+=" ";
+      }
+    }
+    }
+
+    return output;
+  }
+}
