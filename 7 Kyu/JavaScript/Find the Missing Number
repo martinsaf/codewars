@@ -1,0 +1,12 @@
+function missingNo(nums) {
+  const start = Math.min(...nums);
+  const end = Math.max(...nums);
+  
+  const n = end - start + 1;
+  
+  const sumExpected = (n * (start + end)) / 2;
+  
+  const actualSum = nums.reduce((acc, num) => acc + num, 0);
+  
+  return sumExpected - actualSum;
+}
