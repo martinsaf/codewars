@@ -1,0 +1,3 @@
+function myLanguages(results) {
+  return Object.entries(results).filter(([language, value]) => value >= 60).sort((a,b) => b[1] - a[1]).map(([language, value]) => language);
+}
