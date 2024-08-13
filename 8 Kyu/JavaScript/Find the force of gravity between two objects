@@ -1,0 +1,28 @@
+const unitConversion = {
+    kg: 1,
+  g: 1e-3,
+  mg: 1e-6,
+  'μg': 1e-9,
+  lb: 0.453592,
+  m: 1,
+  cm: 1e-2,
+  mm: 1e-3,
+  'μm': 1e-6,
+  ft: 0.3048,
+};
+
+const solution = (arr_val, arr_unit) => {
+  const G = 6.67e-11; // gravitational constant
+
+  // Converting Masses to Kilograms
+  const m1 = arr_val[0] * unitConversion[arr_unit[0]];
+  const m2 = arr_val[1] * unitConversion[arr_unit[1]];
+
+  // Converting Distance to Meters
+  const d = arr_val[2] * unitConversion[arr_unit[2]];
+
+  // Calculating the Gravitational Force
+  const force = G * (m1 * m2) / (d * d);
+
+  return force;
+};
