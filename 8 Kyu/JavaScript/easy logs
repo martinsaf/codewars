@@ -1,0 +1,5 @@
+function logs(x , a, b){
+const calqA = Math.log(a) / Math.log(x);
+const calqB = Math.log(b) / Math.log(x);
+return calqA + calqB;
+}
