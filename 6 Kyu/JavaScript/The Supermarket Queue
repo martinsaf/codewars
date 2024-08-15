@@ -1,0 +1,10 @@
+function queueTime(customers, n) {
+  const till = Array(n).fill(0);
+  
+  customers.forEach(time=>{
+    let tillEmptySooner = till.indexOf(Math.min(...till));
+    
+    till[tillEmptySooner]+= time;
+  });
+  return Math.max(...till);
+}
