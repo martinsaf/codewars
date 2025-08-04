@@ -7,6 +7,12 @@ def create_phone_number(n):
     return res_str
 ```
 
+### Pythonic Solution Using str.format() and Unpacking
+```bash
+def create_phone_number(n):
+    return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+```
+
 ## Description:
 Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
