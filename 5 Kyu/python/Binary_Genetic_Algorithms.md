@@ -30,8 +30,8 @@ class GeneticAlgorithm(object):
             ch1, ch2 = ch1[:point] + ch2[point:], ch2[:point] + ch1[point:]
         return [ch1, ch2]
     
-    def run(self, fitness, length, p_c, p_m, iterations=100):
-        POP_SIZE = 100
+    def run(self, fitness, length, p_c, p_m, iterations=200):
+        POP_SIZE = 200
         population = [self.generate(length) for _ in range(POP_SIZE)]
 
         for _ in range(iterations):
