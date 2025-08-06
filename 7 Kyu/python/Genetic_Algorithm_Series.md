@@ -1,5 +1,7 @@
 # Genetic Algorithm Series - #1 Generate
+
 ## My solution:
+
 ```bash
 import random
 def generate(length):
@@ -7,17 +9,20 @@ def generate(length):
 ```
 
 ## Instructions
+
 A genetic algorithm is based in groups of chromosomes, called populations. To start our population of chromosomes we need to generate random binary strings with a specified length.
 
 In this kata you have to implement a function generate that receives a length and has to return a random binary strign with length characters.
 
-Example:
+###Example:
 Generate a chromosome with length of 4 generate(4) could return the chromosome 0010, 1110, 1111... or any of 2^4 possibilities.
 
 ---
 
 # Genetic Algorithm Series - #2 Mutation
+
 ## My solution:
+
 ```bash
 import random
 def mutate(chromosome, p):
@@ -38,6 +43,7 @@ def mutate(chromosome, p):
 ```
 
 ## Instructions
+
 Mutation is a genetic operator used to maintain genetic diversity from one generation of a population of genetic algorithm chromosomes to the next.
 A mutation here may happen on zero or more positions in a chromosome. It is going to check every position and by a given probability it will decide if a mutation will occur.
 A mutation is the change from 0 to 1 or from 1 to 0.
@@ -45,7 +51,9 @@ A mutation is the change from 0 to 1 or from 1 to 0.
 ---
 
 # Genetic Algorithm Series - #3 Crossover
+
 ## My solution
+
 ```bash
 def crossover(chromosome1, chromosome2, index):
     new1 = chromosome1[:index] + chromosome2[index:]
@@ -54,6 +62,7 @@ def crossover(chromosome1, chromosome2, index):
 ```
 
 ## Instructions
+
 In this kata you have to implement a function that receives two chromosomes chromosome1, chromosome2 and a zero-based index and it has to return an array with the crossover result on both chromosomes [chromosome1, chromosome2].
 
 Example:
