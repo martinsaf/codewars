@@ -73,4 +73,35 @@ index = 3
 # should return ["111110", "000000"]
 ```
 
+---
+
+# Genetic Algortihm Series - #4 Get population and fitnesses
+
+## My solution:
+```bash
+def map_population_fit(population, fitness):
+    return [ChromosomeWrap(chromosome, fitness(chromosome)) for chromosome in population]
+```
+
+## Instructions
+
+In a genetic algorithm, a population is a collection of candidates that may evolve toward a better solution.
+
+We determine how close a chromosome is to a ideal solution by calculating its fitness. https://www.codewars.com/kata/567b468357ed7411be00004a/train You are given two parameters, the population containing all individuals and a function fitness that determines how close to the solution a chromosome is.
+
+Your task is to return a collection containing an object with the chromosome and the calculated fitness.
+
+```bash
+[
+  { chromosome: c, fitness: f },
+  { chromosome: c, fitness: f },
+  ...
+]
+```
+
+Note: you have a pre-loaded namedtuple ChromosomeWrap and you should return a collection of it instead.
+
+```bash
+ChromosomeWrap = namedtuple("ChromosomeWrap", ["chromosome", "fitness"])
+```
 
