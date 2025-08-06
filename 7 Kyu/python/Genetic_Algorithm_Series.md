@@ -14,7 +14,7 @@ A genetic algorithm is based in groups of chromosomes, called populations. To st
 
 In this kata you have to implement a function generate that receives a length and has to return a random binary strign with length characters.
 
-###Example:
+### Example:
 Generate a chromosome with length of 4 generate(4) could return the chromosome 0010, 1110, 1111... or any of 2^4 possibilities.
 
 ---
@@ -65,7 +65,7 @@ def crossover(chromosome1, chromosome2, index):
 
 In this kata you have to implement a function that receives two chromosomes chromosome1, chromosome2 and a zero-based index and it has to return an array with the crossover result on both chromosomes [chromosome1, chromosome2].
 
-Example:
+### Example:
 ```bash
 chromosome1 = "111000"
 chromosome2 = "000110"
